@@ -1,0 +1,540 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>sanginfo</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/css/owl.carousel.css"/>
+	<link rel="stylesheet" href="/css/owl.theme.css"/>
+	<link rel="stylesheet" href="/css/aos.min.css"/>
+	<link rel="stylesheet" href="/css/page.css"/>
+</head>
+<body  ng-app="app">
+	<nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container" ng-controller="NavigationCtrl as vm">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-click="vm.toggleCollapse()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#home"><img class="img-responsive" src="/images/sanginfo_logo.png"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="overflow:hidden!important;" uib-collapse="vm.isCollapsed">
+          <ul id="mynavbar" class="nav navbar-nav navbar-right">
+						<li><a class="active" href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#peoples">People</a></li>
+						<li><a href="#company">Company</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<section id="home">
+		<div class="container-fluid" ng-controller = "Banner">
+			<div class="row">
+				<div class="home-ht-adjust">
+					<data-owl-carousel id="home-carousel" class="owl-carousel home-carousel owl-theme" data-options="{items : 1,singleItem: true,navigation: false,pagination: true}">
+						<div owl-carousel-item="" ng-repeat="item in banner" class="item clr-white" ng-style="{'background-image': 'url(/images/' + item.url + ')'}">
+							<div class="back-tran"></div>
+							<div class="container pos-relative">
+								<p>{{item.info}}</p>
+								<div class="carousel-txt">
+									<div class="row">
+										<div class="col-sm-4 col-md-4 hidden-xs">
+											<p>If you’re looking to hire us:Read what our clients say or see the services we offer</p>
+										</div>
+										<div class="col-sm-3 col-md-4 hidden-xs">
+											<p>If you’re looking to join us:See our job openings or meet the people in our team.</p>
+										</div>
+										<div class="col-sm-5 col-md-4 hidden-xs">
+											<p>Location based services: See how indoor positioning and proximity marketing can change your business.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</data-owl-carousel>
+				</div>
+				<div class="loader"></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="services" class="bkg-white section">
+		<div class="container">
+			<h2 class="text-uppercase text-center clr-grey section-head">Services</h2>
+			<p class="text-center clr-grey section-para">We develop applications for smartphones, tablets and desktops with an eye towards a more Mobile tomorrow &amp; help you connect these to the social Web. We work with organisations of all sizes in the consumer and enterprise space.</p>
+			<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#mb" aria-controls="mb" role="tab" data-toggle="tab">Mobile Platform</a></li>
+					<li role="presentation"><a href="#srv" aria-controls="srv" role="tab" data-toggle="tab">Server Side</a></li>
+					<li role="presentation"><a href="#wbapp" aria-controls="wbapp" role="tab" data-toggle="tab">Web Application</a></li>
+					<li role="presentation"><a href="#cli" aria-controls="cli" role="tab" data-toggle="tab">Client Side</a></li>
+					<li role="presentation"><a href="#microsoft" aria-controls="microsoft" role="tab" data-toggle="tab">Microsoft</a></li>
+			</ul>
+			<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="mb">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.android.com" target="_blank"><div class="service-img service-android"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.apple.com/ios/" target="_blank"><div class="service-img service-ios"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://goo.gl/axwGB" target="_blank"><div class="service-img service-wp8"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://goo.gl/2wyHP" target="_blank"><div class="service-img service-blackberry"></div></a>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="srv">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.java.com/en/" target="_blank"><div class="service-img service-java"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.microsoft.com/net" target="_blank"><div class="service-img service-net"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.php.net/" target="_blank"><div class="service-img service-php"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.python.org/" target="_blank"><div class="service-img service-python"></div></a>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="wbapp">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="http://phonegap.com/" target="_blank"><div class="service-img service-phonegap"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.sencha.com/products/touch/" target="_blank"><div class="service-img service-touch"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="https://developer.apple.com/xcode/" target="_blank"><div class="service-img service-xcode"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.appcelerator.com/" target="_blank"><div class="service-img service-appc"></div></a>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="cli">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.alistapart.com/articles/a-brief-history-of-markup/" target="_blank"><div class="service-img service-html5"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" target="_blank"><div class="service-img service-css"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://jquery.com/" target="_blank"><div class="service-img service-jquery"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://couchdb.apache.org/" target="_blank"><div class="service-img service-couchdb"></div></a>
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="microsoft">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="http://sharepoint.microsoft.com" target="_blank"><div class="service-img service-sharepoint"></div></a>
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="http://www.microsoft.com/en-in/sqlserver/default.aspx" target="_blank"><div class="service-img service-server"></div></a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="clients" class="bkg-yellow section">
+		<div class="container pos-relative" ng-controller = "Clients">
+			<h2 class="text-uppercase text-center clr-grey section-head">Clients</h2>
+			<data-owl-carousel id="client-carousel" class="owl-carousel client-carousel owl-theme" data-options="{items : 1,singleItem: true,navigation: false,pagination: true, autoPlay: 5000}">
+				<div owl-carousel-item="" ng-repeat="item in client" class="item text-center clr-grey">
+					<h3>{{item.head}}</h3>
+					<p>{{item.para}}</p>
+					<h5><strong>{{item.clientname}}<br/>{{item.subhead}}</strong></h5>
+				</div>
+			</data-owl-carousel>
+		</div>
+	</section>
+
+	<section id="careers" class="bkg-white section">
+		<div class="container" ng-controller = "Careers">
+			<h2 class="text-uppercase text-center clr-grey section-head">Careers</h2>
+			<h4 class="text-center clr-grey mrg-top">Interested in working at SangInfo?</h4>
+			<p class="text-center clr-grey careers-head-p">We are a little finicky when it’s about having someone aboard.</p>
+			<p class="text-center clr-grey careers-head-p">Don’t be overawed if you land up having multiple meetings before being hired. <br> Current job openings are listed below.</p>
+			<p class="text-center clr-grey careers-head-p">If you have done something you are proud of, don’t be afraid to brag about it. Please provide links, attachments, or plain old screenshots with your resume.</p>
+			<div class="row careers-block">
+				<div class="col-sm-6 col-md-6">
+					<form id="ios-form" class="form-horizontal" method="post">
+						<div class="panel panel-primary" data-aos="zoom-in" data-aos-duration='1000'>
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Mobile Application Developers - IOS</h3>
+						    </div>
+						    <div class="panel-body ios-txt">
+									<ul class="clr-grey">
+										<li>Proficient with Objective-C or Swift and Cocoa Touch.</li>
+										<li>Experience with iOS frameworks such as Core Data, Core Animation, etc.</li>
+										<li>Familiarity with RESTful APIs to connect iOS applications to back-end services.</li>
+										<li>Experience with performance and memory tuning with tools.</li>
+										<li>Familiarity with Xcode.</li>
+										<li>Proficient understanding of code versioning tools.</li>
+									</ul>
+								</div>
+								<div id="ios-apply" class="panel-body apply-overlay">
+										  <div class="form-group">
+										    <label for="iosusername" class="col-sm-3 control-label">Full Name</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="iosusername" name="iosusername" placeholder="Full Name">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <label for="iosuseremail" class="col-sm-3 control-label">Email</label>
+										    <div class="col-sm-9">
+										      <input type="email" class="form-control" id="iosuseremail" name="iosuseremail" placeholder="Email">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="iosusercontact" class="col-sm-3 control-label">Contact</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="iosusercontact" name="iosusercontact" placeholder="Contact">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="iosuserposition" class="col-sm-3 control-label">Position</label>
+										    <div class="col-sm-9">
+										      <!-- <input type="text" class="form-control" id="iosuserposition" name="iosuserposition" placeholder="Position"> -->
+													<select id="iosuserposition" class="form-control">
+															<option ng-repeat="x in iosposition">{{x}}</option>
+													</select>
+										    </div>
+										  </div>
+								</div>
+
+								<div class="panel-footer">
+									<div class="ios-buttons panel-buttons">
+										<a class="btn btn-success" type="button" ng-click="iosapply()">Apply</a>
+									</div>
+									<div class="ios-sbmt submit-button">
+										<a id="ios-submit" class="btn btn-success ios-submit" type="submit" ng-click="iossubmit(); $event.preventDefault(); $event.stopPropagation();">Submit</a>
+										<a class="btn btn-danger pull-right" type="button" ng-click="ioscancel();">Cancel</a>
+									</div>
+								</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-6 col-md-6">
+					<form id="android-form" class="form-horizontal" method="post">
+						<div class="panel panel-primary" data-aos="zoom-in" data-aos-duration='1000'>
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Mobile Application Developers - Android</h3>
+						    </div>
+						    <div class="panel-body android-txt">
+									<ul class="clr-grey">
+										<li>Proficient with Java.</li>
+										<li>Organizing databases within android application.</li>
+										<li>Familiarity with RESTful APIs to connect android applications to back-end services.</li>
+										<li>Experience with performance and memory tuning with tools.</li>
+										<li>Familiarity with Android Sdk and Android Studio.</li>
+										<li>Proficient understanding of code versioning tools.</li>
+									</ul>
+								</div>
+								<div id="android-apply" class="panel-body apply-overlay">
+										  <div class="form-group">
+										    <label for="androidusername" class="col-sm-3 control-label">Full Name</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="androidusername" name="androidusername" placeholder="Full Name">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <label for="androiduseremail" class="col-sm-3 control-label">Email</label>
+										    <div class="col-sm-9">
+										      <input type="email" class="form-control" id="androiduseremail" name="androiduseremail" placeholder="Email">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="androidusercontact" class="col-sm-3 control-label">Contact</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="androidusercontact" name="androidusercontact" placeholder="Contact">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="androiduserposition" class="col-sm-3 control-label">Position</label>
+										    <div class="col-sm-9">
+										      <!-- <input type="text" class="form-control" id="androiduserposition" name="androiduserposition" placeholder="Position"> -->
+													<select id="androiduserposition" class="form-control">
+															<option ng-repeat="x in androidposition">{{x}}</option>
+													</select>
+										    </div>
+										  </div>
+								</div>
+
+								<div class="panel-footer">
+									<div class="android-buttons panel-buttons">
+										<a class="btn btn-success" type="button" ng-click="androidapply()">Apply</a>
+									</div>
+									<div class="android-sbmt submit-button">
+											<a id="android-submit" class="btn btn-success android-submit" type="submit" ng-click="androidsubmit(); $event.preventDefault(); $event.stopPropagation();">Submit</a>
+											<a class="btn btn-danger pull-right" type="button" ng-click="androidcancel();">Cancel</a>
+									</div>
+								</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row careers-block">
+				<div class="col-sm-6 col-md-6">
+					<form id="net-form" class="form-horizontal" method="post">
+						<div class="panel panel-primary" data-aos="zoom-in" data-aos-duration='1000'>
+						    <div class="panel-heading">
+						        <h3 class="panel-title">FrontEnd Developers</h3>
+						    </div>
+						    <div class="panel-body net-txt">
+									<ul class="clr-grey">
+										<li>Proficient with Html,C.S.S and Javascript.</li>
+										<li>Must be familiar with material design and associated libraries.</li>
+										<li>Familiarity with RESTful APIs to connect WebApp with back-end services.</li>
+										<li>Experience with using javascript frameworks such as jquery,angular,react,backbone,knockout,ember.</li>
+										<li>Familiarity with Atom,Sublimetext,Notepad++.</li>
+										<li>Proficient understanding of code versioning tools.</li>
+									</ul>
+								</div>
+								<div id="net-apply" class="panel-body apply-overlay">
+										  <div class="form-group">
+										    <label for="netusername" class="col-sm-3 control-label">Full Name</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="netusername" name="netusername" placeholder="Full Name">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <label for="netuseremail" class="col-sm-3 control-label">Email</label>
+										    <div class="col-sm-9">
+										      <input type="email" class="form-control" id="netuseremail" name="netuseremail" placeholder="Email">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="netusercontact" class="col-sm-3 control-label">Contact</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="netusercontact" name="netusercontact" placeholder="Contact">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="netuserposition" class="col-sm-3 control-label">Position</label>
+										    <div class="col-sm-9">
+										      <!-- <input type="text" class="form-control" id="netuserposition" name="netuserposition" placeholder="Position"> -->
+													<select id="netuserposition" class="form-control">
+															<option ng-repeat="x in netposition">{{x}}</option>
+													</select>
+										    </div>
+										  </div>
+								</div>
+
+								<div class="panel-footer">
+									<div class="net-buttons panel-buttons">
+										<a class="btn btn-success" type="button" ng-click="netapply()">Apply</a>
+									</div>
+									<div class="net-sbmt submit-button">
+										<a id="net-submit" class="btn btn-success net-submit" type="submit" ng-click="netsubmit(); $event.preventDefault(); $event.stopPropagation();">Submit</a>
+										<a class="btn btn-danger pull-right" type="button" ng-click="netcancel();">Cancel</a>
+									</div>
+								</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-6 col-md-6">
+					<form id="php-form" class="form-horizontal" method="post">
+						<div class="panel panel-primary" data-aos="zoom-in" data-aos-duration='1000'>
+						    <div class="panel-heading">
+						        <h3 class="panel-title">Full Stack Developers</h3>
+						    </div>
+						    <div class="panel-body php-txt">
+									<ul class="clr-grey">
+										<li>Proficient with ASP.Net,Java,Django,Python and Node.</li>
+										<li>Must be familiar with MVC Framework.</li>
+										<li>Familiarity with RESTful APIs to connect WebApp with back-end services.</li>
+										<li>Experience with using SQL Server,Mysql Server,Mongo Db.</li>
+										<li>Familiarity with Atom,Sublimetext,Notepad++,Visual Studio,Php Storm.</li>
+										<li>Proficient understanding of code versioning tools.</li>
+									</ul>
+								</div>
+								<div id="php-apply" class="panel-body apply-overlay">
+										  <div class="form-group">
+										    <label for="phpusername" class="col-sm-3 control-label">Full Name</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="phpusername" name="phpusername" placeholder="Full Name">
+										    </div>
+										  </div>
+										  <div class="form-group">
+										    <label for="phpuseremail" class="col-sm-3 control-label">Email</label>
+										    <div class="col-sm-9">
+										      <input type="email" class="form-control" id="phpuseremail" name="phpuseremail" placeholder="Email">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="phpusercontact" class="col-sm-3 control-label">Contact</label>
+										    <div class="col-sm-9">
+										      <input type="text" class="form-control" id="phpusercontact" name="phpusercontact" placeholder="Contact">
+										    </div>
+										  </div>
+											<div class="form-group">
+										    <label for="phpuserposition" class="col-sm-3 control-label">Position</label>
+										    <div class="col-sm-9">
+										      <!-- <input type="text" class="form-control" id="phpuserposition" name="phpuserposition" placeholder="Position"> -->
+													<select id="phpuserposition" class="form-control">
+															<option ng-repeat="x in phpposition">{{x}}</option>
+													</select>
+										    </div>
+										  </div>
+								</div>
+								<div class="panel-footer">
+									<div class="php-buttons panel-buttons">
+										<a class="btn btn-success" type="button" ng-click="phpapply()">Apply</a>
+									</div>
+									<div class="php-sbmt submit-button">
+										<a id="php-submit" class="btn btn-success php-submit" type="submit" ng-click="phpsubmit(); $event.preventDefault(); $event.stopPropagation();">Submit</a>
+										<a class="btn btn-danger pull-right" type="button" ng-click="phpcancel();">Cancel</a>
+									</div>
+								</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="peoples" class="bkg-blue section">
+		<div class="container" ng-controller = "People">
+			<h2 class="text-uppercase text-center clr-white section-head">Peoples</h2>
+			<div class="row peoples-mrg">
+				<div class="col-sm-6 col-md-3 pt-ht" ng-repeat="item in people">
+					<div class="peoples-img" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration='1000'>
+						<img class="img-responsive img-circle" src="/images/{{item.url}}" alt="img"/>
+						<h4 class="clr-white text-center">{{item.peoplename}}</h4>
+						<p class="clr-white text-center">{{item.details}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="company" class="bkg-white section">
+		<div class="container pos-relative" ng-controller = "Company">
+			<h2 class="text-uppercase text-center clr-grey section-head">Company</h2>
+			<data-owl-carousel id="company-carousel" class="owl-carousel company-carousel owl-theme" data-options="{items : 1,singleItem: true,navigation: false,pagination: true, autoPlay: 5000}">
+				<div class="item text-center">
+					<h3>We began in 1992 - that’s as good as several lifetimes in the computing age! COBOL was in vogue when we started, and we were the Gurus!</h3>
+					<h4>Our experience spans:</h4>
+					<ul class="list-unstyled">
+								<li>- Different countries (US, UK, Middle East, and India)</li>
+								<li>- Different industries (online, retail, manufacturing, service, trading)</li>
+								<li>- Different platforms (Web, Mobile, PCs)</li>
+					</ul>
+					<h5><strong>NOT A NEW KID ON THE BLOCK</strong></h5>
+				</div>
+				<div owl-carousel-item="" ng-repeat="item in company" class="item text-center">
+					<h3>{{item.head}}</h3>
+					<p>{{item.para}}</p>
+					<h5><strong>{{item.subhead}}</strong></h5>
+				</div>
+			</data-owl-carousel>
+		</div>
+	</section>
+
+	<section id="contact" class="bkg-black section">
+		<div class="container">
+			<h2 class="text-uppercase text-center clr-white section-head">Contact</h2>
+			<div class="row row-eq-height contact-mrg">
+
+				<div class="col-sm-6 col-md-3">
+					<div id="map">
+
+					</div>
+
+					<div id="map2" class="hidden-md hidden-xs hidden-lg">
+
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-6 clr-white">
+					<div class="row">
+						<div class="col-md-6">
+							<h4>For Business Development</h4>
+							<p>Ketan Sanghvi</p>
+							<a href="mailto:ketan@sanginfo.com" target="_blank">ketan@sanginfo.com</a>
+						</div>
+						<div class="col-md-6 mobile-mrg">
+							<h4>For Project Inquiries</h4>
+							<p>Riaz Kopti (Mumbai)</p>
+							<a href="mailto:riaz@sanginfo.com" target="_blank">riaz@sanginfo.com</a>
+						</div>
+					</div>
+					<hr>
+					<div class="row contact-mrg">
+						<div class="col-md-6">
+							<h4>Mumbai</h4>
+							<p>Sang Infotech Pvt. Ltd.<br/>B-1, Flr. 3, Prabhat House,<br/>164 S. Bapat Rd., Lower Parel,<br/>Mumbai - 400 013<br/>India.</p>
+							<a href="tel:+91 22 3040 5090" target="_blank">Phone: +91 22 3040 5090</a><br/>
+							<a href="tel:+91 22 3040 5080" target="_blank">Fax: +91 22 3040 5080</a>
+						</div>
+						<div class="col-md-6 mobile-mrg">
+							<h4>Singapore</h4>
+							<p>Sanginfo Pte. Ltd.<br/>7500A Beach Road<br/>#08-313 The Plaza<br/>Singapore 199591</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="hidden-sm col-md-3">
+					<div id="map1">
+
+					</div>
+				</div>
+
+			</div>
+	</section>
+
+	<!-- <footer class="footer">
+		<div class="container">
+		  <div class="row">
+
+		  </div>
+		</div>
+	</footer> -->
+
+  <script src="/js/jquery.min.js"></script>
+	<script src="/js/nod.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/aos.min.js"></script>
+	<script src="/js/angular.min.js"></script>
+  <script src="/js/angular-animate.min.js"></script>
+  <script src="/js/ui.bootstrap.collapse.js"></script>
+
+	<script src="/js/app.js"></script>
+  <script src="/js/common.js"></script>
+  <script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTHeEmWADpCEfjlZ_6FbN3p2by__-Tygg&callback=initMap">
+	</script>
+</body>
+</html>
