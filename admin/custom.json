@@ -1,0 +1,21 @@
+{
+    "editors": {
+        "app": {
+            "path": "/var/www/html/angular-node-express-admin/admin/assets/editors/app.js",
+            "slug": "upload"
+        },
+        "public": {
+            "external": {
+                "js": [
+                    "//cdn.ckeditor.com/4.4.2/standard/ckeditor.js"
+                ]
+            },
+            "local": {
+                "path": "/var/www/html/angular-node-express-admin/admin/assets/editors",
+                "js": [
+                    "/editors.js"
+                ]
+            }
+        }
+    }
+}

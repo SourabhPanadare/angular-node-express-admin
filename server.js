@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var express = require("express");
+var xAdmin = require('express-admin');
 var bodyParser = require('body-parser');
 var path = require('path');
 
@@ -157,4 +158,20 @@ app.post('/phpform',function(req,res){
         throw err;
     });
 
+});
+
+/*------------------------------------Express Admin Connection---------------------*/
+
+
+var config = {
+    dpath: './admin/',
+    config: require('./admin/config.json'),
+    settings: require('./admin/settings.json'),
+    custom: require('./admin/custom.json'),
+    users: require('./admin/users.json')
+    // additionally you can pass your own session middleware to use
+};
+
+xAdmin.init(config, function (err, admin) {
+    app.use('/admin', admin);
 });
