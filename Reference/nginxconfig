@@ -1,0 +1,49 @@
+# server.js:-
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "sanginfo",
+  password: "sanginfo",
+  database: "sanginfo"
+});
+
+con.connect();
+app.listen(3000);
+
+
+# pm2 commands
+
+$ sudo npm install -g pm2
+
+$ pm2 start server.js
+
+$ pm2 startup systemd
+
+$ sudo env PATH=$PATH:/usr/local/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u shailesh --hp /home/shailesh
+
+
+# Nginx Reverse Proxy Server
+
+$ cd /etc/nginx/sites-available 
+
+$ sudo gedit default
+
+server {
+	listen 8030 default_server;
+	listen [::]:8030 default_server;
+
+	server_name _;
+
+	# Tell Nginx and Passenger where your app's 'public' directory is
+	root /home/shailesh/Sourabh/testserver/angular-node-express-admin;
+
+	location / {
+    	proxy_pass http://127.0.0.1:3000;
+    	proxy_http_version 1.1;
+    	proxy_set_header Upgrade $http_upgrade;
+    	proxy_set_header Connection 'upgrade';
+    	proxy_set_header Host $host;
+    	proxy_cache_bypass $http_upgrade;
+ 	}
+}
+
+$ sudo systemctl restart nginx
