@@ -2,6 +2,11 @@
 
   This project is build using angularjs as frontend technology and nodejs as backend technology.
   In this project I have used Express Admin as CMS for node js.
+  
+# Admin UserName And Password
+
+  Uname:- Sanginfo
+  Password:- SangInfo007
 
 # Application connection with mysql
 
