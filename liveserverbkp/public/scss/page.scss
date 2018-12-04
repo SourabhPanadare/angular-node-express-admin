@@ -1,0 +1,592 @@
+@import 'common.scss';
+
+$red-color: #da0009;
+$white-color: #fff;
+$grey-color: #404040;
+$drkgrey-color: #d8d8d8;
+$black: #272B2E;
+
+@mixin width-height($width,$height){
+  width:$width;
+  height:$height;
+}
+
+@mixin mrg($top,$right,$bottom,$left){
+  margin-top:$top;
+  margin-right:$right;
+  margin-bottom:$bottom;
+  margin-left:$left;
+}
+
+@mixin pad($top,$right,$bottom,$left){
+  padding-top:$top;
+  padding-right:$right;
+  padding-bottom:$bottom;
+  padding-left:$left;
+}
+
+@mixin pos($top,$right,$bottom,$left){
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+}
+
+@mixin center-x($value) {
+  -webkit-transform:translatex($value);
+  -moz-transform:translatex($value);
+  -ms-transform:translatex($value);
+  transform:translatex($value);
+}
+
+@mixin center-y($value) {
+  -webkit-transform:translatey($value);
+  -moz-transform:translatey($value);
+  -ms-transform:translatey($value);
+  transform:translatey($value);
+}
+
+@mixin back-pos($x-pos,$y-pos){
+  background-position-x:$x-pos;
+  background-position-y:$y-pos;
+}
+
+
+#home{
+
+  .home-ht-adjust{
+    @include width-height(null,calc(100vh - 50px));
+    @include mrg(50px,null,null,null);
+
+    .home-carousel{
+      @include width-height(null,calc(100vh - 50px));
+      @include mrg(50px,null,null,null);
+
+      .owl-wrapper-outer{
+        @include width-height(null,calc(100vh - 50px));
+
+        .owl-wrapper{
+            @include width-height(null,calc(100vh - 50px));
+
+            .owl-item{
+              @include width-height(null,calc(100vh - 50px));
+
+              .item{
+                  background-repeat: no-repeat;
+                	background-size: cover;
+                	background-position: center;
+                  @include width-height(null,calc(100vh - 50px));
+
+                  .back-tran{
+                    position:absolute;
+                    background:rgba(0,0,0,0.5);
+                    @include width-height(100%,100%);
+                    @include pos(null,0,null,0);
+                  }
+
+                  p{
+                    position:relative;
+                    font-size: 1.5em;
+                    text-align: center;
+                    color:$white-color;
+                    @include width-height(90%,null);
+                    @include mrg(calc(100vh - 150%),auto,auto,auto);
+                  }
+              }
+            }
+          }
+        }
+
+        .owl-pagination{
+          position:absolute;
+          @include pos(null,null,2em,50%);
+          @include center-x(-50%);
+        }
+      }
+    }
+  }
+
+  #services{
+
+    .section-para{
+      text-align:center;
+    }
+
+    .nav-tabs{
+      border-bottom:0px;
+
+      li{
+        float:left;
+        cursor:pointer;
+        @include width-height(50%,70px);
+
+        a{
+          font-size:1.2em;
+          text-align:center;
+          cursor:pointer;
+          color:$grey-color;
+          @include pos(50%,null,null,null);
+          @include center-y(-50%);
+        }
+      }
+
+      .active{
+        background:$drkgrey-color;
+
+        a{
+          background:transparent;
+          border:0px;
+
+          &:hover {
+            background:transparent;
+            border:0px;
+          }
+
+          &:focus {
+            background:transparent;
+            border:0px;
+          }
+        }
+      }
+    }
+
+    .tab-pane{
+      .service-img{
+        text-indent: -9999px;
+        background: url(../images/tech_we_work_with_sprite.png) no-repeat top left;
+        @include width-height(130px,165px);
+        @include mrg(auto,auto,auto,auto);
+      }
+      .service-android{@include back-pos(-545px,-30px);}
+      .service-ios{@include back-pos(-38px,-30px);}
+      .service-wp8{@include back-pos(-798px,-30px);}
+      .service-blackberry{@include back-pos(-290px,-40px);}
+      .service-java{@include back-pos(-38px,-688px);}
+      .service-net{@include back-pos(-288px,-685px);}
+      .service-php{@include back-pos(-545px,-680px);}
+      .service-python{@include back-pos(-792px,-689px);}
+      .service-phonegap{@include back-pos(-36px,-255px);}
+      .service-touch{@include back-pos(-285px ,-260px);}
+      .service-xcode{@include back-pos(-545px ,-252px);}
+      .service-appc{@include back-pos(-788px ,-260px);}
+      .service-html5{@include back-pos(-290px ,-469px);}
+      .service-css{@include back-pos(-795px ,-490px);}
+      .service-jquery{@include back-pos(-543px ,-480px);}
+      .service-couchdb{@include back-pos(-36px ,-948px);}
+      .service-sharepoint{@include back-pos(-288px ,-952px);}
+      .service-server{@include back-pos(-547px ,-954px);}
+    }
+  }
+
+#clients{
+  .client-carousel{
+    .item{
+      h3{
+        font-size:20px;
+      }
+      h5{
+        color:$red-color;
+      }
+    }
+  }
+}
+
+#careers{
+  .careers-block{
+    .apply-overlay{
+      display:none;
+    }
+
+    .panel-body{
+      ul{
+        li{
+          font-size: 15px;
+          line-height: 23px;
+        }
+      }
+    }
+
+    .panel-footer{
+      .submit-button{
+        display:none;
+      }
+    }
+  }
+
+  .careers-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display:none;
+
+    .careers-details{
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      left: 5%;
+      top: 5%;
+      background: #7bc2ff;
+      overflow-y:auto;
+      overflow-x:hidden;
+
+      .close{
+        position: absolute;
+        color: #fff;
+        top: -2%;
+        right: -3%;
+        font-size: 2.5em;
+        opacity: 1;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        padding: 0em 0.25em;
+        margin: 0;
+        z-index:99999;
+      }
+
+      h2{
+        margin-bottom:1em;
+      }
+
+      li{
+        margin-bottom:1em;
+        font-size:1.25em;
+      }
+    }
+  }
+}
+
+#peoples{
+  .peoples-img{
+    @include mrg(2em,null,null,null);
+
+    img{
+      @include mrg(auto,auto,auto,auto);
+    }
+  }
+}
+
+#company{
+  .company-carousel{
+    .item{
+      h3{
+        font-size:20px;
+      }
+      h5{
+        color:$red-color;
+      }
+    }
+
+
+      .owl-pagination{
+        .owl-page{
+          span{
+            background:rgba(0,0,0,0.3);
+          }
+          &:hover {
+            span{
+              background:$black;
+            }
+          }
+        }
+        .active{
+          span{
+            background:$black;
+          }
+        }
+      }
+
+  }
+}
+#contact{
+  #map{
+    @include width-height(100%,250px);
+  }
+  #map1{
+    @include width-height(100%,250px);
+  }
+  #map2{
+    @include width-height(100%,250px);
+  }
+  .contact-mrg{
+    text-align:center;
+  }
+  .mobile-mrg{
+    @include mrg(2em,null,null,null);
+  }
+}
+
+@media(min-width:600px){
+  #home{
+    .home-ht-adjust{
+      .home-carousel{
+        .owl-wrapper-outer{
+          .owl-wrapper{
+              .owl-item{
+                .item{
+                  p{
+                    @include mrg(calc(100vh - 115%),null,null,null);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  #peoples{
+    .peoples-img{
+      p{
+        @include width-height(80%,null);
+        @include mrg(auto,auto,auto,auto);
+      }
+    }
+  }
+}
+
+@media(min-width:768px){
+  #home{
+    .home-ht-adjust{
+      .home-carousel{
+        .owl-wrapper-outer{
+          .owl-wrapper{
+              .owl-item{
+                .item{
+                    p{
+                      @include mrg(calc(100vh - 100%),null,null,null);
+                    }
+                    .carousel-txt{
+                      p{
+                        @include mrg(3em,null,null,null);
+                      }
+                      .col-sm-3{
+                        @include pad(0,0,0,0);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+  #services{
+    .section-para{
+      @include width-height(80%,null);
+      @include mrg(auto,auto,1em,auto);
+    }
+  }
+
+  #peoples{
+    .pt-ht{
+      min-height:400px;
+
+      .peoples-img{
+        p{
+          @include width-height(100%,null);
+        }
+      }
+    }
+  }
+
+  #careers{
+    .careers-head-p{
+      @include width-height(80%,null);
+      @include mrg(auto,auto,1em,auto);
+    }
+
+    .careers-block{
+      .panel-body{
+        min-height:226px;
+      }
+    }
+
+    .careers-overlay{
+      .careers-details{
+        .close{
+          top:-1%;
+          right:-1%;
+        }
+      }
+    }
+  }
+
+  #contact{
+    #map2{
+      @include mrg(3em,null,null,null);
+    }
+  }
+}
+
+@media(min-width:992px){
+  #home{
+    .home-ht-adjust{
+      .home-carousel{
+        .owl-wrapper-outer{
+          .owl-wrapper{
+              .owl-item{
+                .item{
+                  p{
+                    font-size: 34px;
+                    line-height: 55px;
+                    @include pos(70px,null,null,null);
+                    @include mrg(0,auto,auto,auto);
+                  }
+                  .carousel-txt{
+                    p{
+                      font-size: 1.5em;
+                      line-height: 1.4em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        .owl-pagination{
+          position: absolute;
+          @include pos(null,150px,2em,auto);
+          @include center-x(0%);
+        }
+      }
+    }
+  }
+  #services{
+    .section-para{
+        font-size: 1.4em;
+    }
+    .nav-tabs{
+      li{
+        @include width-height(33.33%,null);
+      }
+    }
+    .tab-pane{
+      .service-img{@include width-height(210px,null);}
+      .service-android{@include back-pos(-500px,-32px);}
+      .service-ios{@include back-pos(0px,-22px);}
+      .service-wp8{@include back-pos(-756px,-33px);}
+      .service-blackberry{@include back-pos(-252px,-42px);}
+      .service-java{@include back-pos(0px,-688px);}
+      .service-net{@include back-pos(-252px,-685px);}
+      .service-php{@include back-pos(-504px,-678px);}
+      .service-python{@include back-pos(-756px,-690px);}
+      .service-phonegap{@include back-pos(0px,-256px);}
+      .service-touch{@include back-pos(-252px,-260px);}
+      .service-xcode{@include back-pos(-504px,-252px);}
+      .service-appc{@include back-pos(-756px,-260px);}
+      .service-html5{@include back-pos(-252px,-469px);}
+      .service-css{@include back-pos(-756px,-485px);}
+      .service-jquery{@include back-pos(-504px,-480px);}
+      .service-couchdb{@include back-pos(0px,-948px);}
+      .service-sharepoint{@include back-pos(-252px,-944px);}
+      .service-server{@include back-pos(-504px,-950px);}
+    }
+  }
+  #clients{
+    .client-carousel{
+      p{
+        font-weight: bold;
+        color: $grey-color;
+        @include width-height(55%,null);
+        @include mrg(auto,auto,auto,auto);
+      }
+      h3{
+        @include width-height(75%,null);
+        @include mrg(1em,auto,1em,auto);
+      }
+      .owl-pagination {
+        text-align: right;
+      }
+    }
+  }
+  #company{
+    .company-carousel{
+      p{
+        font-weight: bold;
+        @include width-height(55%,null);
+        @include mrg(auto,auto,auto,auto);
+      }
+      h4{
+        font-weight: bold;
+        @include width-height(55%,null);
+        @include mrg(auto,auto,auto,auto);
+      }
+      h3{
+        @include width-height(70%,null);
+        @include mrg(1em,auto,1em,auto);
+      }
+      .owl-pagination{
+        text-align:right;
+      }
+    }
+  }
+  #contact{
+    .mobile-mrg {
+      margin-top: 0em;
+    }
+  }
+}
+
+@media(min-width:1200px){
+  #home{
+    .home-ht-adjust{
+      .home-carousel{
+        .owl-wrapper-outer{
+          .owl-wrapper{
+              .owl-item{
+                .item{
+                  p{
+                    @include pos(100px,null,null,null);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #careers{
+      .careers-overlay{
+        .careers-details{
+          width:1140px;
+          left:50%;
+          @include center-x(-50%);
+        }
+      }
+    }
+}
+
+@media(max-width:991px) and (orientation:landscape){
+
+}
+
+
+/*-----------------------------------------------Cross Browser CSS--------------------------*/
+
+/*-----------------------------------IE Browsers----------------------------*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+}
+
+/*--------------------------------------Safari Browsers----------------------------*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::i-block-chrome, .someClass {
+
+    }
+}
+
+
+/*---------------------------------------FireFox Browsers---------------------------------*/
+
+@supports (-moz-appearance:none) and (display:contents) {
+    .someClass {
+
+	}
+}

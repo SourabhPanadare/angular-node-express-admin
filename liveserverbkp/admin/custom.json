@@ -1,0 +1,21 @@
+{
+	"editors": {
+        "app": {
+            "path": "/var/www/public_html/sanginfo/admin/assets/editors/app.js",
+            "slug": "upload"
+        },
+        "public": {
+            "external": {
+                "js": [
+                    "//cdn.ckeditor.com/4.4.2/standard/ckeditor.js"
+                ]
+            },
+            "local": {
+                "path": "/var/www/public_html/sanginfo/admin/assets/editors",
+                "js": [
+                    "/editors.js"
+                ]
+            }
+        }
+    }
+}

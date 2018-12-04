@@ -1,0 +1,43 @@
+# VPS Hosting Subdomain Creation
+
+Go To DNS Management :- A Records :- sanginfo.sourabhportfolio.in :- vps ip address
+
+
+# Nginx Configuration
+
+cd /etc/nginx/sites-available:-
+
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/sanginfo
+
+nano sanginfo
+
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /var/www/public_html/sanginfo;
+
+	server_name sanginfo.sourabhportfolio.in;
+
+	location / {
+		proxy_pass http://127.0.0.1:7500;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection 'upgrade';
+		proxy_set_header Host $host;
+		proxy_cache_bypass $http_upgrade;
+	}
+
+}
+
+cp /etc/nginx/sites-available/sanginfo /etc/nginx/sites-available/sanginfo
+
+service ngins restart
+
+
+# Forever Configuration
+
+npm install forever --global
+
+forever start server.js
+

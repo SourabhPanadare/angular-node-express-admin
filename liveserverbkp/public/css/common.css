@@ -1,0 +1,458 @@
+/*-------------------------------------------------Global CSS---------------------------------------------*/
+
+body,html{
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+}
+
+.custom-col-10{
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+
+.custom-col-7{
+  padding-left:7.5px !important;
+  padding-right:7.5px !important;
+}
+
+.custom-col-5{
+  padding-left:5px !important;
+  padding-right:5px !important;
+}
+
+.no-pad{
+  padding:0 !important;
+}
+
+.no-pad-rgt{
+  padding-right:0 !important;
+}
+
+.no-pad-lft{
+  padding-left:0 !important;
+}
+
+.no-mrg{
+  margin:0 !important;
+}
+
+.mrg-top{
+  margin-top:1em;
+}
+
+.mrg-bottom{
+  margin-bottom:1em;
+}
+
+.bkg-white{
+  background:#e4e4e4;
+}
+
+.bkg-yellow{
+  background:#fec340;
+}
+
+.bkg-blue{
+  background:#007179;
+}
+
+.bkg-black{
+  background:#272B2E;
+}
+
+.clr-white{
+  color:#fff;
+}
+
+.clr-grey{
+  color:#404040;
+}
+
+.clr-red{
+  color:#da0009;
+}
+.row-eq-height{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pos-relative{
+  position:relative;
+}
+
+.navbar-custom{
+  background-color: #3c3c3c;
+  padding: 1em 0;
+  margin: 0;
+}
+
+.navbar-right a{
+  color:#fff;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+  background:transparent;
+  color:#da0009;
+}
+
+.owl-theme .owl-pagination .owl-page.active span, .owl-theme .owl-pagination .owl-page:hover span{
+  background:#fff;
+}
+
+.owl-theme .owl-pagination .owl-page span{
+  background:rgba(255,255,255,0.3);
+}
+
+/*------------------------------------------------Mobile CSS---------------------------------------*/
+
+.section{
+  padding:2em 0;
+}
+
+.section-head{
+  font-size:42px;
+}
+
+#home .home-carousel{
+  margin-top:50px;
+  height:calc(100vh - 50px);
+}
+
+#home .home-carousel .owl-wrapper-outer, #home .home-carousel .owl-wrapper, #home .home-carousel .owl-item, #home .home-carousel .item{
+  height:calc(100vh - 50px);
+}
+
+#home .home-carousel .item{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#home .home-carousel .item p{
+  font-size: 34px;
+  line-height: 55px;
+  font-weight: 100;
+  position:absolute;
+  top:150px;
+  color:white;
+}
+
+#home .back-tran{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.5);
+}
+
+#home .owl-pagination{
+  position:absolute;
+  bottom:2em;
+  right:150px;
+}
+
+#home .carousel-txt{
+  margin-top:285px;
+}
+
+#home .home-carousel .item .carousel-txt p{
+  font-size:1.5em;
+  line-height:30px;
+}
+
+#services .section-para{
+  font-size:1.8em;
+}
+
+#services .service-img{
+  height: 223px;
+  text-indent: -9999px;
+  background: url(../images/tech_we_work_with_sprite.png) no-repeat top left;
+  width: 220px;
+}
+
+#services .service-android{
+  background-position: -504px 0px;
+}
+
+#services .service-ios{
+  background-position: 0px 0px;
+}
+
+#services .service-wp8{
+  background-position: -756px 0px;
+}
+
+#services .service-blackberry{
+  background-position: -252px 0px;
+}
+
+#services .service-java{
+  background-position: 0px -669px;
+}
+
+#services .service-net{
+  background-position: -252px -669px;
+}
+
+#services .service-php{
+  background-position: -504px -669px;
+}
+
+#services .service-python{
+  background-position: -756px -669px;
+}
+
+#services .service-phonegap{
+  background-position: 0px -223px;
+}
+
+#services .service-touch{
+  background-position: -252px -223px;
+}
+
+#services .service-xcode{
+  background-position: -504px -223px;
+}
+
+#services .service-appc{
+  background-position: -756px -223px;
+}
+
+#services .service-html5{
+  background-position: -252px -446px;
+}
+
+#services .service-css{
+  background-position: -756px -446px;
+}
+
+#services .service-jquery{
+  background-position: -504px -446px;
+}
+
+#services .service-couchdb{
+  background-position: 0px -892px;
+}
+
+#services .service-sharepoint{
+  background-position: -252px -892px;
+}
+
+#services .service-server{
+  background-position: -504px -892px;
+}
+
+#services .nav-tabs a{
+  font-size:1.2em;
+  color:#404040;
+  width:225px;
+  text-align:center;
+}
+
+#services .nav-tabs .active a{
+  background-color:#d4d4d4;
+}
+
+#services .tab-pane{
+  -webkit-transition-duration: 2s; /* Safari */
+  transition-duration: 2s;
+}
+
+#clients{
+  min-height:450px;
+}
+
+#clients .client-carousel h3{
+  color:#404040;
+  width:75%;
+  margin:auto;
+  margin-bottom:1em;
+  margin-top:1em;
+}
+
+#clients .client-carousel p{
+  color:#404040;
+  width:55%;
+  margin:auto;
+  font-weight:bold;
+}
+
+#clients .client-carousel h5{
+  color:#da0009;
+}
+
+#clients .client-carousel .owl-pagination{
+  text-align:right;
+}
+
+#careers .careers-head-p{
+  width:60%;
+  margin:auto;
+  margin-top:0.6em;
+}
+
+#careers .careers-block{
+  margin-top:2em;
+}
+
+#careers .careers-block .panel-body{
+  min-height:150px;
+}
+
+#peoples .peoples-mrg{
+  margin-top:3em;
+}
+
+#peoples .peoples-img img{
+  margin:auto;
+}
+
+#peoples .pt-ht{
+  min-height:400px;
+}
+
+#company{
+  min-height:450px;
+}
+
+#company .company-carousel h3{
+  color:#404040;
+  width:70%;
+  margin:auto;
+  margin-bottom:1em;
+  margin-top:1em;
+}
+
+#company .company-carousel p, #company .company-carousel h4{
+  color:#404040;
+  width:55%;
+  margin:auto;
+  font-weight:bold;
+}
+
+#company .company-carousel li{
+  color:#404040;
+  width:45%;
+  margin:auto;
+  font-weight:bold;
+  text-align:left;
+  margin-bottom:1em;
+}
+
+#company .company-carousel h5{
+  color:#da0009;
+}
+
+#company .company-carousel .owl-pagination{
+  text-align:right;
+}
+
+#company .owl-theme .owl-pagination .owl-page.active span, #company .owl-theme .owl-pagination .owl-page:hover span{
+  background:#272B2E;
+}
+
+#company .owl-theme .owl-pagination .owl-page span{
+  background:rgba(0,0,0,0.3);
+}
+
+#contact .contact-mrg{
+  margin-top:1em;
+}
+
+#contact #map, #contact #map1{
+  width:100%;
+  height:100%;
+}
+
+
+/*---------------------------------------------------Media Queries------------------------------*/
+
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+
+	.row-eq-height{
+		display:block;
+	}
+}
+
+@media(min-width:768px){
+
+}
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:1200px){
+
+}
+
+@media(max-width:991px) and (orientation:landscape){
+
+}
+
+
+/*-----------------------------------------------Cross Browser CSS--------------------------*/
+
+/*-----------------------------------IE Browsers----------------------------*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+}
+
+/*--------------------------------------Safari Browsers----------------------------*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::i-block-chrome, .someClass {
+
+    }
+}
+
+
+/*---------------------------------------FireFox Browsers---------------------------------*/
+
+@supports (-moz-appearance:none) and (display:contents) {
+    .someClass {
+
+	}
+}

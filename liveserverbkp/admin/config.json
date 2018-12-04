@@ -1,0 +1,16 @@
+{
+    "mysql": {
+        "database": "SP89@sanginfo",
+        "user": "SP89@sanginfo",
+        "password": "SP89@sanginfo"
+    },
+    "server": {
+        "port": 7500
+    },
+    "app": {
+        "layouts": false,
+        "themes": true,
+        "languages": false,
+        "root": "/admin"
+    }
+}
